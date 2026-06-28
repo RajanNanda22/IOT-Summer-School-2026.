@@ -1,4 +1,14 @@
 ```cpp
+/*
+ * Author: Rajan
+ * Date: 2026-06-28
+ * Description: LED blink program with serial blink counter
+ * and potentiometer-controlled blink speed.
+ */
+```
+
+
+```cpp
 int blinkCount = 0;
 int potPin = A0;
 
