@@ -1,5 +1,6 @@
 ```cpp
 int blinkCount = 0;
+int potPin = A0;
 
 void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
@@ -7,10 +8,12 @@ void setup() {
 }
 
 void loop() {
+  int delayTime = map(analogRead(potPin), 0, 1023, 100, 1000);
+
   digitalWrite(LED_BUILTIN, HIGH);
-  delay(500);
+  delay(delayTime);
   digitalWrite(LED_BUILTIN, LOW);
-  delay(500);
+  delay(delayTime);
 
   blinkCount++;
   Serial.print("Blink count: ");
