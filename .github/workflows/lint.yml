@@ -1,1 +1,30 @@
+```yaml
+name: Count Arduino Files
+
+on:
+  push:
+
+jobs:
+  count-ino-files:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Count .ino files
+        run: |
+          python3 - <<EOF
+          import os
+
+          count = 0
+
+          for root, dirs, files in os.walk("."):
+              for file in files:
+                  if file.endswith(".ino"):
+                      count += 1
+
+          print(f"Number of .ino files: {count}")
+          EOF
+```
 
