@@ -116,7 +116,7 @@ reaction_time_game/
 
 ## Author
 
-**Rj Rajan**
+**Rajan Nanda**
 
 Arduino Reaction Time Game Project
 
