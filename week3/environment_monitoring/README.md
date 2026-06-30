@@ -68,4 +68,4 @@ Adafruit Unified Sensor
 
 ## Author
 
-Rj Rajan
+Rajan Nanda
