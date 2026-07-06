@@ -121,5 +121,5 @@ All LEDs OFF
 
 ---
 
-## Auhor
+## Author
 Rajan Nanda
