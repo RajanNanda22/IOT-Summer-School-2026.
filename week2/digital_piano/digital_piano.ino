@@ -1,6 +1,8 @@
 ```cpp
 /*
-  Digital Piano using Buzzer
+  Project - Digital Piano using Buzzer
+  Name - Rajan Nanda
+  Date - 6-7-2026
   Buttons:
   D2 - Do
   D3 - Re
