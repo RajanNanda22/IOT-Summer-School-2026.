@@ -95,3 +95,7 @@ week3/
 - No motion for 30 seconds → LED dims to 20%
 - All events logged to the Serial Monitor with timestamps
 - Circuit diagram saved in `/week3/schematics/`
+
+
+## Author 
+Rajan Nanda 
