@@ -28,6 +28,9 @@ Simulate an AC appliance using a relay (or an LED for safe testing). A DHT11 tem
 | Push Button | D7 |
 | Other Button Terminal | GND |
 
+## Author 
+Rajan Nanda
+
 > The push button uses `INPUT_PULLUP`, so no external pull-up resistor is required.
 
 ---
