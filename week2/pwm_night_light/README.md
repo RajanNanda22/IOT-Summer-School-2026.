@@ -1,126 +1,182 @@
-# Serial Command Interface using Arduino
+# PWM Fading Night Light
 
 ## Overview
 
-This project demonstrates how to control Arduino hardware through commands entered in the Serial Monitor. The Arduino continuously listens for user input and performs the corresponding action.
+The **PWM Fading Night Light** is an Arduino project that demonstrates LED brightness control using **Pulse Width Modulation (PWM)**. The LED continuously performs a breathing (fade in/fade out) effect, and a push button allows switching between three different lighting modes.
 
-Supported commands include turning the built-in LED on or off, blinking it a specified number of times, displaying the current pin status, and resetting the blink counter. Invalid commands are detected and an error message is displayed.
+The current operating mode is displayed on the Serial Monitor for easy monitoring and debugging.
+
+---
+
+## Features
+
+- PWM-based LED brightness control
+- Three lighting modes selectable using a push button
+- Continuous breathing animation
+- SOS emergency flashing pattern
+- Serial Monitor displays the active mode
+- Simple and beginner-friendly implementation
 
 ---
 
 ## Components Required
 
-* Arduino Uno (or compatible board)
-* USB Cable
-* Arduino IDE
-* Built-in LED (Pin 13)
+- Arduino Uno (or compatible board)
+- 1 × LED
+- 1 × 220Ω Resistor
+- 1 × Push Button
+- Breadboard
+- Jumper Wires
+- USB Cable
 
 ---
 
-## Supported Commands
+## Circuit Connections
 
-| Command         | Description                                      |
-| --------------- | ------------------------------------------------ |
-| `LED_ON`        | Turns the built-in LED ON                        |
-| `LED_OFF`       | Turns the built-in LED OFF                       |
-| `BLINK_X`       | Blinks the LED **X** times (1–9)                 |
-| `STATUS`        | Displays the current LED state and blink counter |
-| `RESET`         | Resets the blink counter                         |
-| Invalid Command | Prints `ERROR: Unknown command`                  |
+### LED
+
+| Component | Arduino Pin |
+|----------|-------------|
+| LED Anode (+) | PWM Pin 9 |
+| LED Cathode (-) | GND (through 220Ω resistor) |
+
+### Push Button
+
+| Button Pin | Arduino Pin |
+|------------|-------------|
+| One Side | Digital Pin 2 |
+| Other Side | GND |
+
+> Configure the button using `INPUT_PULLUP` in the Arduino code.
 
 ---
 
-## Working
+## Working Principle
 
-1. Upload the program to the Arduino.
-2. Open the Serial Monitor.
-3. Set the baud rate to match the program (for example, **9600 baud**).
-4. Enter one of the supported commands and press **Send**.
-5. The Arduino processes the command and performs the requested action.
-6. If an unsupported command is entered, the program prints:
+The Arduino continuously monitors the push button. Each button press cycles through one of three lighting modes:
 
-```text
-ERROR: Unknown command
+### Mode 1 – Slow Breathing
+
+- LED gradually fades from OFF to full brightness and back to OFF.
+- One complete breathing cycle takes approximately **3 seconds**.
+
+### Mode 2 – Fast Pulse
+
+- LED fades much faster.
+- One complete cycle takes approximately **0.5 seconds**.
+
+### Mode 3 – SOS Pattern
+
+The LED flashes the international Morse code distress signal:
+
+```
+... --- ...
+```
+
+Where:
+
+- `.` = Short flash
+- `-` = Long flash
+
+The pattern repeats continuously until another mode is selected.
+
+---
+
+## Serial Monitor Output
+
+Example:
+
+```
+PWM Fading Night Light
+
+Current Mode: Slow Breathing
+
+Current Mode: Fast Pulse
+
+Current Mode: SOS Pattern
 ```
 
 ---
 
-## Example Commands
+## PWM Explanation
 
-```text
-LED_ON
-LED_OFF
-BLINK_3
-BLINK_7
-STATUS
-RESET
-HELLO
+PWM (Pulse Width Modulation) allows the Arduino to simulate analog output by rapidly switching a digital pin between HIGH and LOW.
+
+The LED brightness is controlled using:
+
+```cpp
+analogWrite(ledPin, brightness);
+```
+
+Brightness values range from:
+
+| Value | Brightness |
+|-------|------------|
+| 0 | OFF |
+| 128 | 50% Brightness |
+| 255 | Fully ON |
+
+---
+
+## Project Structure
+
+```
+week3/
+└── pwm_fading_night_light/
+    ├── pwm_fading_night_light.ino
+    └── README.md
 ```
 
 ---
 
-## Example Serial Output
+## How to Run
 
-```text
-Command: LED_ON
-LED is ON
-
-Command: BLINK_3
-Blinking LED 3 times...
-
-Command: STATUS
-LED State : OFF
-Blink Counter : 3
-
-Command: RESET
-Blink Counter Reset
-
-Command: TEST
-ERROR: Unknown command
-```
+1. Connect the circuit according to the wiring diagram.
+2. Open the Arduino sketch.
+3. Select the correct board and COM port.
+4. Upload the program.
+5. Open the Serial Monitor (9600 baud).
+6. Observe the LED breathing effect.
+7. Press the push button to switch between the three modes.
 
 ---
 
-## Input Validation
+## Expected Behavior
 
-* Accepts only the predefined commands.
-* `BLINK_X` supports values from **1** to **9**.
-* Any invalid or unsupported command displays:
+| Mode | Description |
+|------|-------------|
+| Mode 1 | Slow breathing effect (3-second cycle) |
+| Mode 2 | Fast pulse effect (0.5-second cycle) |
+| Mode 3 | SOS Morse code flashing pattern |
 
-```text
-ERROR: Unknown command
-```
+---
 
-This prevents unexpected behavior and improves program reliability.
+## Applications
+
+- Automatic night lights
+- Decorative LED lighting
+- Emergency signaling systems
+- PWM learning projects
+- Arduino beginner projects
+- Smart home lighting demonstrations
 
 ---
 
 ## Learning Outcomes
 
-* Serial communication using `Serial.begin()`
-* Reading user input with `Serial.readString()`
-* Comparing strings in Arduino
-* Controlling digital outputs
-* Implementing command-based interfaces
-* Input validation and error handling
-* Maintaining program state with variables
+After completing this project, you will understand:
 
----
-
-## Folder Structure
-
-```text
-week2/
-└── serial_command_interface/
-    ├── serial_command_interface.ino
-    └── README.md
-```
+- Pulse Width Modulation (PWM)
+- LED brightness control using `analogWrite()`
+- Push button input handling
+- Mode switching using a state variable
+- Serial Monitor debugging
+- Timing and LED animation techniques
+- Morse code implementation for LED signaling
 
 ---
 
 ## Author
 
 **Rajan Nanda**
-
-Arduino Programming – Week 2 Assignment
 
