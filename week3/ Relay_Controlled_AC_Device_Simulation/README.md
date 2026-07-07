@@ -74,3 +74,7 @@ Relay OFF | Temperature: 27.5 °C
 - Relay remains ON until the temperature drops below **28°C**.
 - Manual override button toggles the relay state at any time.
 - All relay state changes are displayed on the Serial Monitor together with the temperature reading.
+
+
+  ## Author
+  Rajan Nanda
