@@ -120,6 +120,6 @@ week2/
 
 ## Author
 
-**Rj Rajan**
+**Rajan Nanda**
 
 Arduino Programming – Week 2 Assignment
