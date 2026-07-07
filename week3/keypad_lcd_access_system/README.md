@@ -126,3 +126,7 @@ WAIT 10 SEC
 - Correct PIN grants access with the green LED.
 - Incorrect PIN activates the red LED and buzzer.
 - The system locks for 10 seconds after three consecutive incorrect attempts.
+
+
+## Author 
+Rajan Nanda 
