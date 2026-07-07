@@ -1,5 +1,7 @@
 /*
   Ultrasonic Parking Sensor
+  Name - Rajan Nanda 
+  Date - 6-7-2026
   HC-SR04 Distance Alert System
   Uses millis() for non-blocking timing
 */
