@@ -75,3 +75,6 @@ Instead of `delay()`, we use **non-blocking timing** with:
 * `loop()` runs repeatedly for main logic
 * Long `delay()` blocks execution
 * `millis()` enables non-blocking programming
+* 
+### Author 
+Rajan Nanda
