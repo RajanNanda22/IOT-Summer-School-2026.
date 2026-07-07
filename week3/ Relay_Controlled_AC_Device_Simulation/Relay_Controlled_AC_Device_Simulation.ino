@@ -1,6 +1,7 @@
 /*
   Q27 - Relay Controlled AC Device Simulation
-
+  Name - Rajan Nanda
+  Date - 6-7-2026
   Components:
   - Arduino Uno
   - DHT11 Sensor
