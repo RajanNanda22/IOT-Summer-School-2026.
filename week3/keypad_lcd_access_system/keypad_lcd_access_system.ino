@@ -1,6 +1,7 @@
 /*
-  Q28 - Keypad + LCD Password Protected Access System
-
+  Project - Keypad + LCD Password Protected Access System
+  Name - Rajan Nanda 
+  Date - 6-7-2026
   Components:
   - Arduino Uno
   - 4x4 Membrane Keypad
