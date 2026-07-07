@@ -1,5 +1,7 @@
 /*
-  Q26 - DC Motor Speed Control with L298N
+  Project- DC Motor Speed Control with L298N
+  Name - Rajan Nanda 
+  Date - 6-7-2026
 
   Components:
   - Arduino Uno
