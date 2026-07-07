@@ -1,6 +1,7 @@
 /*
-  Q24 - Multi-Sensor Data Logger
-
+  Project - Multi-Sensor Data Logger
+  Name - Rajan Nanda 
+  Date - 6-7-2026
   Sensors:
   - DHT11 (Temperature & Humidity)
   - LDR (Light Level)
