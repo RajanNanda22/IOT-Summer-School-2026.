@@ -66,3 +66,7 @@ Direction: Forward | Speed: 90% | State: Running
 - Direction button switches between Forward and Reverse.
 - Start/Stop button enables or disables the motor.
 - Serial Monitor displays the current direction, speed percentage, and motor state.
+
+
+## Author 
+Rajan Nanda 
