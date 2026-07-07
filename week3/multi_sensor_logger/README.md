@@ -85,3 +85,6 @@ Distance  : 42 cm
 - Light level is shown as both a percentage and a status (Bright, Normal, or Dark).
 - Distance is displayed in centimeters.
 - Output is formatted for easy reading in the Serial Monitor.
+
+## Author 
+Rajan Nanda 
