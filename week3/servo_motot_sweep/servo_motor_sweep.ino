@@ -1,6 +1,7 @@
 /*
-  Q25 - Servo Motor Sweep
-
+  Project - Servo Motor Sweep
+  Name  - Rajan Nanda
+  Date - 6-7-2026
   Components:
   - Arduino Uno
   - SG90 Servo Motor
