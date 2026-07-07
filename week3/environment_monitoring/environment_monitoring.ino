@@ -1,5 +1,8 @@
 /*
-  Environmental Monitoring Station
+  Project - Environmental Monitoring Station
+  Name - Rajan Nanda
+  Date - 6-7-2026
+  
   Reads temperature and humidity from DHT11 every 2 seconds.
   Displays data in CSV format:
   timestamp,temp_C,temp_F,humidity
