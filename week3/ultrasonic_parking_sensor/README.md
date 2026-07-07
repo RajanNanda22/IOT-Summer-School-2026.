@@ -64,5 +64,4 @@ distance = (duration * 0.034) / 2;
 ---
 
 ## Author
-
-Rj Rajan
+Rajan Nanda 
