@@ -1,7 +1,7 @@
 # IoT Summer School 2026
 
-**Name:** Rajan  \
-**Roll Number:**35   
+**Name : Rajan Nanda**   \
+**Roll Number : 35**  
 
 # Project Description:
 This repository contains my work for the IoT Summer School 2026.
